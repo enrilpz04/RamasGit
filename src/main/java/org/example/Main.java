@@ -1,19 +1,30 @@
 package org.example;
 
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+
+
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        float resultado = multiplicarNumeros();
+        System.out.println("El resultado es: " + resultado);
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+    }
+
+    public static float multiplicarNumeros() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Multiplicación: ");
+
+        System.out.println("Introduce el primer número");
+        float num1 = sc.nextFloat();
+
+        System.out.println("Introduce el segundo número");
+        float num2 = sc.nextFloat();
+
+        float resultado = num1 * num2;
+        return resultado;
     }
 }
